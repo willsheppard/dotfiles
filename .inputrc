@@ -1,0 +1,5 @@
+# Fix keys: home, end, delete
+# http://blog.andrewbeacock.com/2007/08/how-to-get-home-end-keys-working-in.html
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[3~": delete-char
