@@ -1,0 +1,81 @@
+autocmd!
+filetype on
+
+set autoindent
+set backspace=indent,eol,start
+set nobackup
+set background=dark
+set clipboard=autoselect
+set nocompatible
+set complete=.,b,u,w,t,i,d " autocomplete buffers
+set cinoptions=>2,e0,n0,}0,^0,:2,=2,p2,t0,(2,)30,*40,+2,f0,{0,c2,u2
+set cinkeys=0{,0},!^F,o,O,e,*<Return>,0#
+set comments=s1:/*,mb:*,el:*/,://,b:#,:%,:XCOMM,nb:>,fb:-
+set dictionary=/usr/share/dict/words
+set noerrorbells
+set esckeys
+set expandtab
+set fileformat=unix
+set formatoptions=cqrtl
+set helpheight=0
+set hidden
+set highlight=8r,db,es,hs,mb,Mr,nu,rs,sr,tb,vr,ws
+set history=100
+set nohlsearch
+set ignorecase
+set incsearch
+set iskeyword=@,48-57,_,192-255,-,.,@-@
+set laststatus=2
+set lazyredraw
+set magic
+set modeline
+set modelines=4
+set more
+set nonumber
+set paste
+set pastetoggle=<F4>
+set path=.,/home/gilbertt
+set report=0
+set norestorescreen
+set ruler
+set scrolloff=0
+set shell=/usr/local/bin/bash
+set shiftwidth=2
+set showbreak="+ "
+set showcmd
+set showmatch
+set showmode
+set smartcase
+set smartindent
+set smarttab
+set nostartofline
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set tabstop=2
+set tildeop
+set textwidth=760000
+set title
+set ttyfast
+set undolevels=1000
+set updatecount=100000000
+set updatetime=60000000
+set visualbell
+set whichwrap=<,>,b,s
+set wildchar=<TAB>
+
+if &term=="xterm"
+  if has("terminfo")
+    set t_Co=8
+    set t_Sf=1%dm
+    set t_Sb=1%dm
+  else
+    set t_Co=8
+    set t_Sb=m
+    set t_Sf=m
+  endif
+endif
+
+syntax on
+
+" jump to last edited position if possible
+autocmd BufRead *,.* :normal '"
+set notitle
