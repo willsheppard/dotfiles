@@ -30,6 +30,26 @@ set pastetoggle=<F2>
 " Don't underline line numbers (how did they get underlined in the first place?!)
 :hi LineNr term=NONE
 
+" Show a line at column 80 (Vim 7.3 and above)
+":set colorcolumn=80
+
+" Visually show long lines (for Vim before 7.3)
+hi OverLength ctermbg=none cterm=none
+match OverLength /\%>80v/
+let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
+" Type \H to toggle
+nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
+fun! s:LongLineHLToggle()
+ if !exists('w:longlinehl')
+  let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
+  echo "Long lines highlighted"
+ else
+  call matchdelete(w:longlinehl)
+  unl w:longlinehl
+  echo "Long lines unhighlighted"
+ endif
+endfunction
+
 " ********************** Joao's config **********************
 
 "set bg=dark
