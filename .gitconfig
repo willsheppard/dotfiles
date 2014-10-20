@@ -1,13 +1,16 @@
 [user]
-        name = Will Sheppard
-        email = XXX.XXX@XXX.XXX
+    name = Will Sheppard
+    email = XXX.XXX@XXX.XXX
 [core]
-        editor = vi
-        pager = less -r
+    editor = vi
+    # make colours get escaped properly
+    pager = less -r
 [alias]
-        co = checkout
-        st = status
+    co = checkout
+    st = status
 [diff]
-        noprefix = true
+    # don't show a/ and b/ at the beginning of filepaths in diffs
+    noprefix = true
 [push]
-        default = simple
+    # Push to @{upstream} unless the name is different. See http://git-scm.com/docs/git-config
+    default = simple
