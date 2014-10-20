@@ -1,0 +1,13 @@
+[user]
+        name = Will Sheppard
+        email = XXX.XXX@XXX.XXX
+[core]
+        editor = vi
+        pager = less -r
+[alias]
+        co = checkout
+        st = status
+[diff]
+        noprefix = true
+[push]
+        default = simple
