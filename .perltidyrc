@@ -1,0 +1,29 @@
+# Want these
+-i=4        # 4 character indents in blocks
+-pt=2       # "horizontal tightness" 2 - no space for parenthesis tokens
+-wls='=>'   # ensure there's always space to the left of =>
+-wrs='=>'   # and always to the right of =>
+-vtc=0      # always break before a closing token
+-l=79       # 79 characters wide please
+-nolc       # no "outdenting" for long comments - indent them properly
+-nolq       # no "outdenting" for long quotes/strings
+-ssc        # static side comments - don't mess with end-of-line comments
+-sscp=#     # static comment identifier
+-nola       # don't outdent labels
+
+# Don't want these
+#-sot        # stack opening tokens - same as -sop -sohb -sosb
+#-sct        # stack closing tokens when possible to avoid lines with isolated closing tokens.
+#-lp         # line up parentheses
+#-vt=2       # define opening vertical tightness
+#-st -se     # filter instructions to the parser docs
+#-nsfs       # 'for' loop semicolon spaces	
+#-nbbc       # no blanks before comments
+
+# Docs
+#
+# Reference for all the possible perltidy options:
+# http://perltidy.sourceforge.net/perltidy.html#formatting_options
+#
+# Detailed explanation of some of the options:
+# http://perltidy.sourceforge.net/stylekey.html
