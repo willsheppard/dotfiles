@@ -27,3 +27,13 @@
 #
 # Detailed explanation of some of the options:
 # http://perltidy.sourceforge.net/stylekey.html
+
+# How to disable
+#
+#<<<  do not let perltidy touch this
+#my @list = (1,
+#            1, 1,
+#            1, 2, 1,
+#            1, 3, 3, 1,
+#            1, 4, 6, 4, 1,);
+#>>>
