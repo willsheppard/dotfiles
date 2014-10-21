@@ -50,9 +50,17 @@ fun! s:LongLineHLToggle()
  endif
 endfunction
 
-" ********************** Joao's config **********************
+" Word-wrap long lines without inserting a linebreak
+:set wrap
+:set linebreak
+:set nolist  " list disables linebreak
+" Prevent Vim from automatically inserting line breaks in newly entered text
+:set textwidth=0
+:set wrapmargin=0
+" Don't reformat existing long lines when editing them
+:set formatoptions+=l
 
-"set bg=dark
+" ********************** Joao's config **********************
 
 " http://nvie.com/posts/how-i-boosted-my-vim/
 
@@ -74,11 +82,10 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set hidden      "hide buffers instead of closing them
 
-set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
+"set autoindent    " always set autoindenting on
 "set copyindent    " copy the previous indentation on autoindenting (doesn't work with 6.1)
 set number      " show line numbers
 set shiftwidth=4  " number of spaces to use for autoindenting
@@ -95,7 +102,7 @@ set hlsearch      " highlight search terms
 set expandtab
 autocmd FileType perl set smartindent
 
-set title                " change the terminal's title
+"set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 set nobackup
@@ -110,5 +117,3 @@ set incsearch   " show search matches as you type
 
 " map ,/ to no highlite search
 nmap <silent> ,/ ;nohlsearch<CR>
-
-"cmap w!! w !sudo tee % >/dev/null #sudo write file
