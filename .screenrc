@@ -1,0 +1,5 @@
+# Show tabs at the bottom of the screen
+hardstatus string "%{= g} %{= w}%-Lw%{=r}%n%f* %t%{-}%+LW"
+
+# Enable scrolling
+termcapinfo xterm* ti@:te@
