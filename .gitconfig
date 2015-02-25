@@ -1,6 +1,6 @@
 [user]
     name = Will Sheppard
-    email = XXX.XXX@XXX.XXX
+    email = nobody@example.com
 [core]
     editor = vi
     # make colours get escaped properly
