@@ -5,12 +5,14 @@
 [core]
     editor = vi
     # make colours get escaped properly
-    pager = less -r
+    pager = less
 
 [alias]
     co = checkout
     st = status
     logg = log --color --stat=200,200 --decorate --abbrev-commit --relative
+    tree = log --oneline --graph --color
+    treed = log --oneline --graph --color --decorate
 
 [diff]
     # don't show a/ and b/ at the beginning of filepaths in diffs
