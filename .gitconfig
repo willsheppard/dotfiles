@@ -1,6 +1,8 @@
 [user]
     name = Will Sheppard
     email = nobody@example.com
+    # For github to recognise my commits and link to my profile:
+    # email = 1519594+willsheppard@users.noreply.github.com
 
 [core]
     editor = vi
