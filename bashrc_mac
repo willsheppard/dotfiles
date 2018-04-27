@@ -1,0 +1,30 @@
+# Enable custom scripts in ~/bin/
+export PATH=$HOME/bin:$PATH
+
+# Make svn diff colours work
+export TERM=xterm-color
+
+# (Linux) Make directories more visible on a black background: i.e. light blue, not dark blue
+#export LS_COLORS=$(echo $LS_COLORS|sed 's/di=01;34/di=01;36/')
+#eval $(dircolors|sed 's/di=01;34/di=01;36/')
+
+# Aliases for Linux
+#alias ls="ls --color"
+#alias ssh="ssh -A"
+
+# Aliases for Mac
+alias ls="ls -G"
+
+## Prompt for Mac
+#export PS1="[Mac] \w \$ "
+# User specific aliases and functions
+# (copied from vagrant ~/.bashrc)
+export PS1="\[\e[1;32m\]Go\[\e[0m\] [\A\$(jobs | awk '{ print \$3 }' | tr '\n' '|' | awk '{ print \"\[\033[1;31m|\]\" \$1 \"\[\033[0m\]\" }'): \[\033[1;34m\]\$(git branch 2>/dev/null | grep '*' | cut -c 3-)\[\033[0m\] \W$] "
+
+export PATH=~/dev/linux-scripts:$PATH
+
+# After each command, append to the history file
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
