@@ -22,6 +22,9 @@
 
 [push]
     # Push to @{upstream} unless the name is different. See http://git-scm.com/docs/git-config
+    # old versions
+    #default = current
+    # newer versions
     default = upstream
 
 [branch]
