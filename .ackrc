@@ -1,0 +1,19 @@
+--color
+
+--ignore-dir=.git
+--ignore-dir=blib
+
+--ignore-file=ext:html
+--ignore-file=ext:yml
+--ignore-file=ext:dat
+--ignore-file=ext:sql
+--ignore-file=ext:css
+--ignore-file=ext:ep
+--ignore-file=ext:js
+
+# recorded http sessions
+--ignore-file=ext:t-mock-output
+--ignore-file=ext:t-lwp-mock.out
+--ignore-file=ext:t-mojo-ua-mock.out
+--ignore-file=ext:mojo_ua
+--ignore-file=ext:out
