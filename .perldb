@@ -1,0 +1,7 @@
+{{v
+
+$DB::deep = 1000;
+
+use Data::Dumper;
+$DB::alias{x} = 's/xx\s+(.*)/p Data::Dumper::Dumper($1)/';
+
