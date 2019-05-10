@@ -5,9 +5,10 @@
     # email = 1519594+willsheppard@users.noreply.github.com
 
 [core]
-    editor = vi
+    editor = /usr/bin/vim
     # make colours get escaped properly
     pager = less
+    autocrlf = input
 
 [alias]
     co = checkout
@@ -28,13 +29,13 @@
     default = upstream
 
 [branch]
-    # Rebase upon pull for all branches
-    autosetuprebase = always
-    rebase = true
+#    # Rebase upon pull for all branches
+#    autosetuprebase = always
+#    rebase = true
 
 [branch "master"]
-    # Rebase upon pull for all master
-    rebase = true
+#    # Rebase upon pull for all master
+#    rebase = true
 
 [rerere]
     # Remember recorded resolutions
