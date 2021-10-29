@@ -10,7 +10,6 @@ export TERM=xterm-color
 
 # Aliases for Linux
 alias ls="ls --color"
-alias ssh="ssh -A"
 
 # Aliases for Mac
 #alias ls="ls -G"
