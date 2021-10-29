@@ -9,14 +9,14 @@ export TERM=xterm-color
 #eval $(dircolors|sed 's/di=01;34/di=01;36/')
 
 # Aliases for Linux
-#alias ls="ls --color"
-#alias ssh="ssh -A"
+alias ls="ls --color"
+alias ssh="ssh -A"
 
 # Aliases for Mac
-alias ls="ls -G"
+#alias ls="ls -G"
 
 # Prompt for Mac
-export PS1="[Mac] \w \$ "
+#export PS1="[Mac] \w \$ "
 
 export PATH=~/dev/linux-scripts:$PATH
 
