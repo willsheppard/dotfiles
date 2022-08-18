@@ -1,5 +1,4 @@
 " ********************** Will's config **********************
-
 " Syncronise syntax highlighting properly
 " See also http://vim.wikia.com/wiki/Fix_syntax_highlighting
 :syntax on
@@ -14,7 +13,10 @@ autocmd BufEnter * :syntax sync fromstart
 " Default white text on yellow background is invisible.
 " Change to purple background.
 ":highlight Search guibg=Purple guifg=NONE
-:highlight Search cterm=NONE ctermfg=grey ctermbg=blue
+":highlight Search cterm=NONE ctermfg=grey ctermbg=blue
+":highlight Search cterm=NONE ctermfg=black ctermbg=blue
+:hi Search ctermbg=LightYellow
+:hi Search ctermfg=Red
 
 " EXAMPLE of mapping a keypress to a sequence of other keypresses
 " map CTRL-E to end-of-line (while in insert mode)
@@ -26,6 +28,8 @@ autocmd BufRead *,.* :normal '"
 
 " Don't auto-indent when pasting, that really messes it up
 set pastetoggle=<F2>
+" Default to paste mode, because I always forget
+set paste
 
 " Don't underline line numbers (how did they get underlined in the first place?!)
 :hi LineNr term=NONE
@@ -59,6 +63,9 @@ set pastetoggle=<F2>
 :set wrapmargin=0
 " Don't reformat existing long lines when editing them
 :set formatoptions+=l
+
+" Don't indent perl comments (#)
+:set indentkeys-=0#
 
 " ********************** Joao's config **********************
 
@@ -117,3 +124,9 @@ set incsearch   " show search matches as you type
 
 " map ,/ to no highlite search
 nmap <silent> ,/ ;nohlsearch<CR>
+
+" ***********************************************************************
+
+:colorscheme ron
+
+"au BufReadPost *.pm set syntax=pl
