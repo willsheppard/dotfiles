@@ -13,10 +13,10 @@ export TERM=xterm-color
 #alias ssh="ssh -A"
 
 # Aliases for Mac
-alias ls="ls -G"
+alias ls="ls --color"
 
-# Prompt for Mac
-export PS1="[Mac] \w \$ "
+# Prompt for Dell
+export PS1="\[\e[1;32m\]Dell\[\e[0m\] [\A\$(jobs | awk '{ print \$3 }' | tr '\n' '|' | awk '{ print \"\[\033[1;31m|\]\" \$1 \"\[\033[0m\]\" }') \[\033[1;36m\]\$(git branch 2>/dev/null | grep '*' | cut -c 3-)\[\033[0m\] \W$] "
 
 export PATH=~/dev/linux-scripts:$PATH
 
@@ -40,5 +40,18 @@ export HISTFILE=~/.bash_eternal_history
 #PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # After each command, append to the history file and reread it
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+# (need this to NOT change history within each session/terminal console window)
+#export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+# TODO: Install keychain. Example output:
+#    * keychain 2.8.5 ~ http://www.funtoo.org
+#    * Found existing ssh-agent: 32340
+#    * Adding 1 ssh key(s): ....
+#    * ssh-add: Identities added: ...
+
+# ssh keys
+#job=broadbean
+#/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_puppet"
+#/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_bitbucket"
+#source $HOME/.keychain/$HOSTNAME-sh
 
