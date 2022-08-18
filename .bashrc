@@ -9,14 +9,18 @@ export TERM=xterm-color
 #eval $(dircolors|sed 's/di=01;34/di=01;36/')
 
 # Aliases for Linux
-#alias ls="ls --color"
-#alias ssh="ssh -A"
+alias ls="ls --color"
 
 # Aliases for Mac
+#alias ls="ls -G"
+# Aliases for Linux
 alias ls="ls --color"
 
 # Prompt for Dell
 export PS1="\[\e[1;32m\]Dell\[\e[0m\] [\A\$(jobs | awk '{ print \$3 }' | tr '\n' '|' | awk '{ print \"\[\033[1;31m|\]\" \$1 \"\[\033[0m\]\" }') \[\033[1;36m\]\$(git branch 2>/dev/null | grep '*' | cut -c 3-)\[\033[0m\] \W$] "
+
+# Prompt for Mac
+#export PS1="[Mac] \w \$ "
 
 export PATH=~/dev/linux-scripts:$PATH
 
