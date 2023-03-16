@@ -35,7 +35,7 @@ set paste
 :hi LineNr term=NONE
 
 " Show a line at column 80 (Vim 7.3 and above)
-":set colorcolumn=80
+:set colorcolumn=80
 
 " Visually show long lines (for Vim before 7.3 - and after 6.1)
 "hi OverLength ctermbg=none cterm=none
@@ -114,7 +114,7 @@ set visualbell           " don't beep
 set noerrorbells         " don't beep
 set nobackup
 
-" colorscheme mustang
+":colorscheme mustang
 
 "set list " visible punctuation, including $ for every line ending
 "set listchars=tab:>.,trail:.,extends:#,nbsp:. " (doesn't work with 6.1)
