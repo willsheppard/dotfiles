@@ -2,7 +2,9 @@
     name = Will Sheppard
     email = nobody@example.com
     # For github to recognise my commits and link to my profile:
-    # email = 1519594+willsheppard@users.noreply.github.com
+    #   email = 1519594+willsheppard@users.noreply.github.com
+    # To fix commit author:
+    #   git commit --amend --reset-author
 
 [core]
     editor = /usr/bin/vim
