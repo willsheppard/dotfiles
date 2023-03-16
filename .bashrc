@@ -22,8 +22,6 @@ export PS1="\[\e[1;32m\]Dell\[\e[0m\] [\A\$(jobs | awk '{ print \$3 }' | tr '\n'
 # Prompt for Mac
 #export PS1="[Mac] \w \$ "
 
-export PATH=~/dev/linux-scripts:$PATH
-
 # Avoid duplicates
 export HISTCONTROL=ignoredups:erasedups
 # When the shell exits, append to the history file instead of overwriting it
@@ -53,9 +51,12 @@ export HISTFILE=~/.bash_eternal_history
 #    * Adding 1 ssh key(s): ....
 #    * ssh-add: Identities added: ...
 
-# ssh keys
+# Mac keychain
 #job=broadbean
 #/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_puppet"
 #/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_bitbucket"
 #source $HOME/.keychain/$HOSTNAME-sh
+
+# Paths
+export PATH="$HOME/alt/linux-scripts:$PATH"
 
