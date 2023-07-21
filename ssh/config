@@ -1,4 +1,57 @@
+# Personal
+
 Host github.com
-  HostName github.com
-  User willsheppard
-  IdentityFile ~/.ssh/id...etc
+    Hostname github.com
+    User ...
+    IdentityFile ~/.ssh/id_ed25519.github...
+
+Host digi-sea ....uk.to
+    Hostname ....uk.to
+    User ...
+    IdentityFile ~/.ssh/id_rsa.digi-sea...
+
+Host jumpbox
+    HostName 1.2.3.4
+    HostName foo.uk.to # use https://freedns.afraid.org/
+    Port ...
+    User ...
+    IdentityFile ~/.ssh/id_ed25519.jump...
+    ForwardAgent yes
+    ForwardX11 yes
+    ForwardX11Trusted yes
+
+# Company
+
+Host bastion
+    User ...
+    HostName ...
+    Port 22
+    IdentityFile ~/.ssh/id_rsa.devops...
+    ForwardAgent yes
+    HostName 1.2.3.4
+
+Host bitbucket.org
+    Hostname bitbucket.org
+    User git
+    IdentityFile ~/.ssh/id_rsa.bitbucket...
+
+Host foovm
+    HostName 127.0.0.1
+    User www
+    Port 2222
+    StrictHostKeyChecking no
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/id_rsa.foovm...
+    IdentitiesOnly yes
+    ForwardAgent yes
+    #ProxyJump jumpbox
+
+# Mac OSX keychain
+
+Host *
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+    ConnectTimeout 10
+    ServerAliveInterval 30
+    ServerAliveCountMax 2
