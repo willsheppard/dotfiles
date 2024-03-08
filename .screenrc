@@ -1,5 +1,6 @@
-# Show tabs at the bottom of the screen
-hardstatus string "%{= g} %{= w}%-Lw%{=r}%n%f* %t%{-}%+LW"
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
 
-# Enable scrolling
-termcapinfo xterm* ti@:te@
+defutf8 on
+utf8 on
+defscrollback 10240
