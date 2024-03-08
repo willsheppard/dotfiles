@@ -52,7 +52,7 @@ export HISTFILE=~/.bash_eternal_history
 #    * ssh-add: Identities added: ...
 
 # Mac keychain
-#job=broadbean
+#job=....
 #/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_puppet"
 #/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_bitbucket"
 #source $HOME/.keychain/$HOSTNAME-sh
