@@ -2,8 +2,9 @@
 
 Host github.com
     Hostname github.com
-    User ...
+    User git
     IdentityFile ~/.ssh/id_ed25519.github...
+    PreferredAuthentications publickey
 
 Host digi-sea ....uk.to
     Hostname ....uk.to
