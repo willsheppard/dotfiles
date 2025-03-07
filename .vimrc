@@ -27,9 +27,9 @@ imap <F9> :next<CR>
 autocmd BufRead *,.* :normal '"
 
 " Don't auto-indent when pasting, that really messes it up
-set pastetoggle=<F2>
-" Default to paste mode, because I always forget
-set paste
+:set pastetoggle=<F2>
+" Default to nopaste mode
+:set nopaste
 
 " Don't underline line numbers (how did they get underlined in the first place?!)
 :hi LineNr term=NONE
@@ -94,7 +94,7 @@ set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 "set autoindent    " always set autoindenting on
 "set copyindent    " copy the previous indentation on autoindenting (doesn't work with 6.1)
-set number      " show line numbers
+set nonumber      " don't show line numbers, to make copying easier
 set shiftwidth=4  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
