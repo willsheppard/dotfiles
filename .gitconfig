@@ -1,16 +1,10 @@
 [user]
-# Personal no-spam email (do not use):
-#    name = Will Sheppard
-#    email = nobody@example.com
-
-# Professional $job:
-# Note: Instead of using this globally, define it per-repo.
-#    name = Will Sheppard
-#    email = will.sheppard.uk@gmail.com
-
-# Personal github email:
 #    name = Will Sheppard
 #    email = 1519594+willsheppard@users.noreply.github.com
+
+# Personal github ^
+
+# Note: Don't define name/email globally, only per-repo.
 
 # Note: To fix commit author
 #   git rebase -i HEAD~1
