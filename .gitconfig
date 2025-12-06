@@ -37,13 +37,15 @@
     autoSetupRemote = true
 
 [branch]
-#    # Rebase upon pull for all branches
-#    autosetuprebase = always
-#    rebase = true
+    # Rebase upon pull for all branches
+    # Note: Team must all agree to rebase, otherwise rebases + merges = a bad time
+    # And you'll have to force push.
+    autosetuprebase = always
+    rebase = true
 
 [branch "master"]
-#    # Rebase upon pull for all master
-#    rebase = true
+    # Rebase upon pull for only master
+    rebase = true
 
 [rerere]
     # Remember recorded resolutions
