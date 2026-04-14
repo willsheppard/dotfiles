@@ -1,23 +1,22 @@
-# Enable custom scripts in ~/bin/
-export PATH=$HOME/bin:$PATH
-
-# Make svn diff colours work
-export TERM=xterm-color
+# Paths
+export PATH="$HOME/alt/linux-scripts:$PATH"
+export PATH="$HOME/alt/linux-scripts/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # (Linux) Make directories more visible on a black background: i.e. light blue, not dark blue
 #export LS_COLORS=$(echo $LS_COLORS|sed 's/di=01;34/di=01;36/')
 #eval $(dircolors|sed 's/di=01;34/di=01;36/')
-
-# Aliases for Linux
-alias ls="ls --color"
 
 # Aliases for Mac
 #alias ls="ls -G"
 # Aliases for Linux
 alias ls="ls --color"
 
-# Prompt for Dell
-export PS1="\[\e[1;32m\]Dell\[\e[0m\] [\A\$(jobs | awk '{ print \$3 }' | tr '\n' '|' | awk '{ print \"\[\033[1;31m|\]\" \$1 \"\[\033[0m\]\" }') \[\033[1;36m\]\$(git branch 2>/dev/null | grep '*' | cut -c 3-)\[\033[0m\] \W$] "
+# Prompt
+#SYS=Dell
+SYS=Termux
+export PS1="\[\e[1;32m\]${SYS}\[\e[0m\] [\A\$(jobs | awk '{ print \$3 }' | tr '\n' '|' | awk '{ print \"\[\033[1;31m|\]\" \$1 \"\[\033[0m\]\" }') \[\033[1;36m\]\$(git branch 2>/dev/null | grep '*' | cut -c 3-)\[\033[0m\] \W$] "
 
 # Prompt for Mac
 #export PS1="[Mac] \w \$ "
@@ -56,7 +55,4 @@ export HISTFILE=~/.bash_eternal_history
 #/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_puppet"
 #/usr/bin/keychain --nogui ~/.ssh/id_rsa.$job"_bitbucket"
 #source $HOME/.keychain/$HOSTNAME-sh
-
-# Paths
-export PATH="$HOME/alt/linux-scripts:$PATH"
 
