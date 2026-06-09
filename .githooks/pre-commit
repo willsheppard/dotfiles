@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check for trailing whitespace in staged files
+files_with_whitespace=$(git diff --cached --name-only --diff-filter=ACM | xargs grep -l '[[:space:]]$' 2>/dev/null)
+
+if [ -n "$files_with_whitespace" ]; then
+    echo
+    echo "❌ commit hook failed: Trailing whitespace. To fix:"
+    echo
+    echo "  sed -i 's/[[:space:]]*$//' "$files_with_whitespace
+    echo ""
+    exit 1
+fi
+
+exit 0
