@@ -5,6 +5,7 @@
 # Personal github ^
 
 # Note: Don't define name/email globally, only per-repo.
+#       That guards against accidental commits/pushes.
 
 # Note: To fix commit author
 #   git rebase -i HEAD~1
@@ -12,10 +13,13 @@
 #   git commit --amend --reset-author
 
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/bin/env vim
     # make colours get escaped properly
     pager = less
     autocrlf = input
+    # check here for hooks, for example
+    # pre-commit hook for trailing whitespace
+    hooksPath = .githooks
 
 [alias]
     co = checkout
@@ -58,8 +62,8 @@
 [credential]
     helper = cache --timeout=2678400 # 31 days
 [credential "https://github.com"]
-    helper = 
+    helper =
     helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-    helper = 
+    helper =
     helper = !gh auth git-credential
